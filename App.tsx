@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, FlatList, ActivityIndicator } from "react-nativ
 import { StatusBar } from "expo-status-bar";
 
 // Importando a modelagem TypeScript
-
+import { Medico } from "./src/interfaces/medico";
 import { Paciente } from "./src/types/paciente";
 
 // Importando os serviços que consomem a API real
