@@ -37,76 +37,75 @@ import ConsultasMedicoScreen from "./src/screens/medico/ConsultasMedicoScreen";
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
-    return (
-        <NavigationContainer>
-            <Stack.Navigator
-                initialRouteName="Home"
-                screenOptions={{
-                    headerStyle: { backgroundColor: "#79059C" },
-                    headerTintColor: "#fff",
-                    headerTitleStyle: { fontWeight: "bold" },
-                }}
-            >
-                {/* Tela inicial - sem cabecalho */}
-                <Stack.Screen
-                    name="Home"
-                    component={HomeScreen}
-                    options={{ headerShown: false }}
-                />
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerStyle: { backgroundColor: "#79059C" },
+          headerTintColor: "#fff",
+          headerTitleStyle: { fontWeight: "bold" },
+        }}
+      >
+        {/* Tela inicial - sem cabecalho */}
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ headerShown: false }}
+        />
 
-                {/* Fluxo Paciente */}
-                <Stack.Screen
-                    name="LoginPaciente"
-                    component={LoginPacienteScreen}
-                    options={{ title: "Acesso do Paciente" }}
-                />
-                <Stack.Screen
-                    name="CadastroPaciente"
-                    component={CadastroPacienteScreen}
-                    options={{ title: "Cadastro de Paciente" }}
-                />
-                <Stack.Screen
-                    name="MinhasConsultas"
-                    component={MinhasConsultasScreen}
-                    options={{ title: "Minhas Consultas", headerBackVisible: false }}
-                />
-                <Stack.Screen
-                    name="EscolhaEspecialidade"
-                    component={EscolhaEspecialidadeScreen}
-                    options={{ title: "Escolha a Especialidade" }}
-                />
-                <Stack.Screen
-                    name="EscolhaMedico"
-                    component={EscolhaMedicoScreen}
-                    options={{ title: "Escolha o Medico" }}
-                />
-                <Stack.Screen
-                    name="AgendarConsulta"
-                    component={AgendarConsultaScreen}
-                    options={{ title: "Agendar Consulta" }}
-                />
+        {/* Fluxo Paciente */}
+        <Stack.Screen
+          name="LoginPaciente"
+          component={LoginPacienteScreen}
+          options={{ title: "Acesso do Paciente" }}
+        />
+        <Stack.Screen
+          name="CadastroPaciente"
+          component={CadastroPacienteScreen}
+          options={{ title: "Cadastro de Paciente" }}
+        />
+        <Stack.Screen
+          name="MinhasConsultas"
+          component={MinhasConsultasScreen}
+          options={{ title: "Minhas Consultas", headerBackVisible: false }}
+        />
+        <Stack.Screen
+          name="EscolhaEspecialidade"
+          component={EscolhaEspecialidadeScreen}
+          options={{ title: "Escolha a Especialidade" }}
+        />
+        <Stack.Screen
+          name="EscolhaMedico"
+          component={EscolhaMedicoScreen}
+          options={{ title: "Escolha o Medico" }}
+        />
+        <Stack.Screen
+          name="AgendarConsulta"
+          component={AgendarConsultaScreen}
+          options={{ title: "Agendar Consulta" }}
+        />
 
-                {/* Fluxo Medico */}
-                <Stack.Screen
-                    name="LoginMedico"
-                    component={LoginMedicoScreen}
-                    options={{ title: "Acesso do Medico" }}
-                />
-                <Stack.Screen name="CadastroMedico"
-                    component={CadastroMedicoScreen}
-                    options={{ title: "Cadastro de Medico" }}
-                />
-                <Stack.Screen name="PerfilMedico"
-                    component={PerfilMedicoScreen}
-                    options={{ title: "Complete seu Perfil", headerBackVisible: false }}
-                />
-                <Stack.Screen
-                    name="ConsultasMedico"
-                    component={ConsultasMedicoScreen}
-                    options={{ title: "Consultas Agendadas", headerBackVisible: false }}
-                />
-            </Stack.Navigator>
-        </NavigationContainer>
-    );
+        {/* Fluxo Medico */}
+        <Stack.Screen
+          name="LoginMedico"
+          component={LoginMedicoScreen}
+          options={{ title: "Acesso do Medico" }}
+        />
+        <Stack.Screen          name="CadastroMedico"
+          component={CadastroMedicoScreen}
+          options={{ title: "Cadastro de Medico" }}
+        />
+        <Stack.Screen          name="PerfilMedico"
+          component={PerfilMedicoScreen}
+          options={{ title: "Complete seu Perfil", headerBackVisible: false }}
+        />
+        <Stack.Screen
+          name="ConsultasMedico"
+          component={ConsultasMedicoScreen}
+          options={{ title: "Consultas Agendadas", headerBackVisible: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
-

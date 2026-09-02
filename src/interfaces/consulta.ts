@@ -6,7 +6,7 @@ export interface Consulta {
   id: number;
   medico: Medico;
   paciente: Paciente;
-  dataHora: string;
+  dataHora: string; // ISO string vindo do backend (ex: "2026-05-20T09:00:00")
   valor: number;
   status: StatusConsulta;
   observacoes?: string;
